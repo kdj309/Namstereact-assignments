@@ -8,6 +8,7 @@ import { restrodata } from "./utils/mockData";
 
 const App = () => {
   const [restaurantstorender, setRestaurantsToRender] = useState(restrodata)
+  console.log(<Topbar />);
   return (  <>
     <Navbar />
     <Topbar setRestroTorender={setRestaurantsToRender}/>

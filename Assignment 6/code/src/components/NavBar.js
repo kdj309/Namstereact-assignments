@@ -1,8 +1,9 @@
+import { useState } from "react";
 import { LOGO_URL } from "../utils/constants";
 
 
 const Navbar = () => {
-  let somevalue="abc";
+  const [islogin, setislogin] = useState(true)
   return (
     <div className="container">
       <div className="Header">
@@ -24,6 +25,9 @@ const Navbar = () => {
         </li>
         <li>
           <a href="/">Contact</a>
+        </li>
+        <li>
+          <button className="btn" onClick={()=>setislogin((prev)=>!prev)}>{islogin==true?"Logout":"Login"}</button>
         </li>
       </ul>
     </div>
