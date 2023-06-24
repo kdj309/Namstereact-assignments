@@ -1,0 +1,420 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  padding: 0.56em 0.86em;
+  align-items: center;
+}
+.Header > img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.Header {
+  display: flex;
+  align-items: center;
+}
+.container > ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+  gap: 10px;
+  justify-self: center;
+}
+.container > ul > li {
+  padding: 0.56em 0.86em;
+}
+.container > ul > li > a {
+  text-decoration: none;
+}
+.restrocontainer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+.parentcontainer {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  padding: 0.64em 0.76em;
+  width: 280px;
+  gap: 8px;
+  transition-property: box-shadow;
+  transition-duration: 0.6ms;
+  transition-timing-function: ease-in;
+}
+.parentcontainer:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.imagecontainer > img {
+  width: 254px;
+  height: 160px;
+  object-fit: contain;
+}
+.textcontainer {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  gap: 5px;
+}
+.textcontainer > h2 {
+  font-size: 17px;
+  font-weight: 500;
+  word-break: break-word;
+}
+.textcontainer > p {
+  color: #686b78;
+  font-size: 13px;
+  margin-top: 4px;
+  word-break: break-all;
+}
+.cardfooter {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+  padding: 0.15em 0.63em;
+  font-size: 12px;
+}
+.ratingdiv {
+  background-color: #48c479;
+  color: #fff;
+  padding: 0.45em 0.56em;
+}
+.topbarcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.56em 0.45em;
+  margin: 0.75em 0.86em;
+}
+.topbarcontainer > div > input {
+  padding: 0.56em 0.45em;
+  outline: none;
+  width: 200px;
+}
+.shimmercard {
+  height: max-content;
+  padding: 0.64em 0.76em;
+  width: 280px;
+}
+.skeleton {
+  opacity: 0.7;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+.skeleton-text {
+  margin-top: 12px;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 14px;
+}
+.skeleton-text:last-child {
+  width: 80%;
+}
+.img {
+  width: 254px;
+  height: 160px;
+}
+.btn {
+  padding: 0.54em 0.68em;
+  outline: none;
+  display: inline-block;
+  border: 1px solid black;
+  font-size: 16px;
+  width: max-content;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+.shimmercontainer,
+.restrodetailcontainer {
+  width: 50%;
+  margin: auto;
+  margin-top: 10px;
+}
+.shimmercontainer > .img {
+  width: 100%;
+}
+
+.nestedcontainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+.nestedcontainer > .skeleton {
+  width: 50%;
+}
+.nestedcontainer > .skeleton > .img {
+  width: 100%;
+}
+.nestedcontainer > .skeleton > .skeleton-text {
+  margin-top: 12px;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 14px;
+}
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-text {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: space-between;
+  height: max-content;
+  padding: 0.43em 0.34em;
+}
+.header-text > h4 {
+  font-size: 1.43rem;
+  font-weight: 600;
+  color: #282c3f;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+.header-text > p {
+  font-size: 0.93rem;
+  color: #7e808c;
+  height: calc(0.93rem + 2px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+.rating-div {
+  flex: 0.2;
+  color: #3d9b6d;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e9e9eb;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: block;
+  border: 1px solid #e9e9eb;
+  box-shadow: 0 1px 5px #f9f9f9;
+  border-radius: 6px;
+  text-align: center;
+  padding: 8px;
+  max-width: 100px;
+  float: right;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-weight: 300;
+  color: #282c3f;
+}
+.totalratings {
+  font-size: 11px;
+  color: #8b8d97;
+  font-family: ProximaNovaCondensedRegular, arial, Helvetica Neue, sans-serif;
+  font-weight: 600;
+}
+.rating-div > div > p:first-child {
+  color: #3d9b6d;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e9e9eb;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: block;
+}
+.header-separator {
+  border: none;
+  border-bottom: 1px dashed #d3d3d3;
+  margin-bottom: 18px;
+  opacity: unset;
+}
+.RestaurantOffer_container {
+  display: flex;
+}
+.RestaurantOffer_infoWrapper {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  justify-content: center;
+}
+.RestaurantOffer_headerWrapper {
+  display: flex;
+  align-items: center;
+}
+.RestaurantOffer_header {
+  font-size: 1.07rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: #686b78;
+  font-family: ProximaNovaCondensedBold, arial, Helvetica Neue, sans-serif;
+}
+.RestaurantOffer_offerCodeWrapper {
+  font-size: 0.86rem;
+  color: #93959f;
+  margin-top: 4px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 200px;
+  font-weight: 700;
+  font-family: ProximaNovaCondensedRegular, arial, Helvetica Neue, sans-serif;
+  font-size: 0.66em;
+}
+a {
+  text-decoration: none !important;
+  color: unset !important;
+}
+.Menuitem-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.item-text-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.43em 0.56em;
+  height: max-content;
+  gap: 5px;
+}
+.item-button {
+  width: 118px;
+  height: 96px;
+  /* -o-object-fit: cover; */
+  object-fit: cover;
+  border-radius: 6px;
+  border: none;
+  background: none;
+}
+.item-button > img {
+  width: 118px;
+  height: 96px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.item-button > img::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(40, 44, 63, 0.05);
+  background-blend-mode: overlay;
+  height: 96px;
+  border-radius: 6px;
+}
+.add-button{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;
+  padding: 0.34em 0.43em;
+  align-items: center;
+  box-shadow: 0 3px 8px #e9e9eb;
+  border-radius: 4px;
+  color: #48c479;
+  position: relative;
+  top: -40px;
+  background-color: white;
+}
+p,h3,h5,h4{
+  margin-bottom: 0 !important;
+}
+.item-title{
+  margin-right: 4px;
+  font-size: 1.22rem;
+  font-weight: 500;
+  color: #3e4152;
+  word-break: break-word;
+}
+.item-price{
+  font-size: 14px;
+}
+.item-description{
+  line-height: 1.3;
+  color: rgba(40,44,63,.45);
+  letter-spacing: -.3px;
+  font-size: 14px;
+}
+.category-title{
+  color: #3e4152;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+.category-separator{
+  height: 16px;
+  border-bottom: 16px solid #f1f1f6;
+  margin-top: 8px;
+}
+.item-separator{
+  border-bottom: .5px solid #d3d3d3;
+  height: .5px;
+  margin: 20px 0;
+}
+.formcontainer{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formcontainer>form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.AboutPageHeader::before,.AboutPageHeader::after{
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+}
+.AboutPageHeader{
+  min-height: 60vh;
+  max-height: 999px;
+  padding: 0;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+.aboutimgcontainer{
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url('https://careers.swiggy.com/assets/img/banner3.jpg');
+  opacity: 0.9;
+}
+.AboutPageHeader> div:last-child{
+  height: 275px;
+}
