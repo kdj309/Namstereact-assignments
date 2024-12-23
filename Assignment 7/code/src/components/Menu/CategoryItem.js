@@ -19,22 +19,21 @@ export default function CategoryItem({ title, id, items, isCategory = false }) {
       <div
         id={`collapse${id}`}
         className="accordion-collapse collapse show"
-        // data-bs-parent="#accordionExample"
       >
         <div className="accordion-body">
           {isCategory
-            ? items.map((categoryitem, index) => (
-
+            ? items?.map((categoryitem, index) => (
                 <CategoryItem
                   key={`${categoryitem.title}${index}`}
-                  id={`${categoryitem.title.replace(/ /g,"")}${index}`}
+                  id={`${categoryitem.title.replace(/ /g, "")}${index}`}
                   items={categoryitem?.itemCards}
                   title={categoryitem.title}
                 />
               ))
             : items?.map((fooditem) => {
-                // console.log(fooditem);
-                const itemprice=fooditem?.card?.info?.price?fooditem?.card?.info?.price:fooditem?.card?.info?.defaultPrice
+                const itemprice = fooditem?.card?.info?.price
+                  ? fooditem?.card?.info?.price
+                  : fooditem?.card?.info?.defaultPrice;
                 return (
                   <MenuItem
                     key={fooditem?.card?.info?.id}
@@ -48,7 +47,7 @@ export default function CategoryItem({ title, id, items, isCategory = false }) {
               })}
         </div>
       </div>
-      <div className='category-separator'></div>
+      <div className="category-separator"></div>
     </div>
   );
 }

@@ -17,7 +17,7 @@ export default function MenuItem({icon,title,price,description,imgid}) {
       <div>
         <div>
           <button className='item-button'>
-{imgid&&<img src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/${imgid}`} alt="foodimage" />}
+{imgid&&<img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit//${imgid}`} alt="foodimage" />}
              
             </button>
           
